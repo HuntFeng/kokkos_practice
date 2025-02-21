@@ -1,0 +1,3 @@
+find_package(Kokkos CONFIG)
+add_executable(matrix_multiplication matrix_multiplication.cpp)
+target_link_libraries(matrix_multiplication Kokkos::kokkos)

@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.28)
+project(poisson_solver)
+set(CMAKE_CXX_STANDARD 20)
+add_executable(poisson_solver poisson_solver.cpp)
+find_package(Kokkos)
+target_link_libraries(poisson_solver PUBLIC INIReader Kokkos::kokkos)
