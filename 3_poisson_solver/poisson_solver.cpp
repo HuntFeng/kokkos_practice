@@ -2,7 +2,6 @@
 #include <Kokkos_Core.hpp>
 #include <array>
 #include <filesystem>
-#include <format>
 #include <fstream>
 #include <tuple>
 

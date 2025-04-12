@@ -77,3 +77,13 @@ EOF
 # set these env vars to optimize OPENMP 4.0 performance
 ENV OMP_PROC_BIND=spread
 ENV OMP_PLACES=threads
+
+# Neovim
+RUN <<EOF
+# install neovim
+# clone config
+# install clangd
+# change mason registry
+# unminimized system to have man
+# install man
+EOF
