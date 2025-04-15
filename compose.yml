@@ -1,0 +1,13 @@
+services:
+  kokkos:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: kokkos
+    container_name: kokkos_dev
+    volumes:
+      - .:/workspace/kokkos_practice
+      # - ${HOME}/.config/nvim:/root/.config/nvim
+    working_dir: /workspace/kokkos_practice
+    tty: true
+    stdin_open: true

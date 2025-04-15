@@ -80,10 +80,14 @@ ENV OMP_PLACES=threads
 
 # Neovim
 RUN <<EOF
-# install neovim
-# clone config
-# install clangd
-# change mason registry
-# unminimized system to have man
-# install man
+wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+chmod +x nvim-linux-x86_64.appimage
+./nvim-linux-x86_64.appimage --appimage-extract
+mv squashfs-root /
+ln -s /squashfs-root/AppRun /usr/bin/nvim
+# config
+mkdir ~/.config
+cd ~/.config
+git clone https://github.com/HuntFeng/nvim.git
+rm nvim/lua/plugins/image.lua
 EOF
